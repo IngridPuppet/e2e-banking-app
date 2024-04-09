@@ -112,5 +112,6 @@ jobs:
           context: ./power-pay-frontend
           file: ./power-pay-frontend/Dockerfile
           push: true
+          tags: random
           #tags: ${{ steps.meta.outputs.tags }}
           #labels: ${{ steps.meta.outputs.labels }} 
