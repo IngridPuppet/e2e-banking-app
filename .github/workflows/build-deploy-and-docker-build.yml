@@ -72,9 +72,8 @@ jobs:
   # Docker Build Job
   docker-build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+    
+    permissions: write-all
     
     steps:
       - name: Checkout Code
