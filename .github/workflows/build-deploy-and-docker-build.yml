@@ -73,7 +73,9 @@ jobs:
   docker-build:
     runs-on: ubuntu-latest
     
-    permissions: write-all
+    permissions:
+        contents: read
+        packages : write
     
     steps:
       - name: Checkout Code
@@ -88,7 +90,6 @@ jobs:
       - name: Login to the Docker registry
         uses: docker/login-action@v2
         with:
-          logout: false
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
